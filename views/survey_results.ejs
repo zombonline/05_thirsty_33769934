@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+    <title><%= shopName %> - Survey</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1 class="main-title">Survey Submitted!</h1>
+    <div class="survey-results">
+        <h2>Your Survey Results:</h2>
+        <ul>
+            <li><strong>Name:</strong> <%= formData.first_name %> <%= formData.last_name %></li>
+            <li><strong>Email:</strong> <%= formData.email %></li>
+            <li><strong>Age:</strong> <%= formData.age %></li>
+            <li><strong>Selected Category:</strong> <%= formData.chosen_product_category %></li>
+            <li><strong>Student:</strong> <%= formData.student ? 'Yes' : 'No' %></li>
+        </ul>
+    </div>
+</body>
+</html>

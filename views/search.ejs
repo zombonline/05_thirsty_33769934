@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <title><%= shopName %> - Search</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1 class="main-title">Search Our Products</h1>
+    <form action="/search_result" method="GET" class="form-container">
+        <input id="search_name" type="text" name="search_name" placeholder="Name">
+        <select id="search_category" name ="search_category" >
+            <% productCategories.forEach(function(cat) { %>
+                <option value="<%= cat %>"><%= cat %></option>
+            <% }); %>
+        </select>
+        <input type="submit" value="OK" class="submit-btn">
+    </form>
+    <% if (searchData) { %>
+        <div class="alert-box success">
+            You searched for "<strong><%= searchData.name %></strong>" in category "<strong><%= searchData.category %></strong>"
+        </div>
+    <% } %>
+</body>
+</html>
