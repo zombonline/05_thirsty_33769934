@@ -1,20 +1,14 @@
-<!doctype html>
-<html>
-<head>
-    <title><%= shopName %> - Register</title>
-    <link rel="stylesheet" href="/styles.css">
-</head>
 <body>
     <h1 class="main-title">Register</h1>
     <form method="POST" action="/registered" class="form-container">
         <label for="first_name">First Name:</label>
-        <input id="first_name" type="text" name="first_name" value="<%= formData && formData.first_name ? formData.first_name : '' %>"/>
+        <input id="first_name" type="text" required name="first_name" value="<%= formData && formData.first_name ? formData.first_name : '' %>"/>
         
         <label for="last_name">Last Name:</label>
-        <input id="last_name" type="text" name="last_name" value="<%= formData && formData.last_name ? formData.last_name : '' %>"/>
+        <input id="last_name" type="text" required name="last_name" value="<%= formData && formData.last_name ? formData.last_name : '' %>"/>
         
         <label for="email">Email:</label>
-        <input id="email" type="email" name="email" value="<%= formData && formData.email ? formData.email : '' %>"/>
+        <input id="email" type="email" required name="email" value="<%= formData && formData.email ? formData.email : '' %>"/>
         
         <input type="submit" value="OK" class="submit-btn"/>
     </form>
@@ -24,4 +18,3 @@
         </div>
     <% } %>
 </body>
-</html>

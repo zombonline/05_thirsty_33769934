@@ -117,3 +117,29 @@ div[style*="display: flex"] input[type="checkbox"] {
     vertical-align: middle;
     transform: translateY(5px);
 }
+.navbar {
+    background-color: #0066cc;
+    overflow: hidden;
+    display: flex;
+    justify-content: left;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    gap: 10px;
+}
+.nav-btn {
+  color: #004999;
+  text-decoration: none;
+  background: white;
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: background 0.3s;
+  font-weight: 500;
+}
+
+.nav-btn:hover {
+  background: lightblue;
+}
+
+.nav-btn.active {
+  background: #007bff; /* highlight current page */
+}

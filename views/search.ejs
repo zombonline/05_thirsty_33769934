@@ -1,18 +1,8 @@
-<!doctype html>
-<html>
-<head>
-    <title><%= shopName %> - Search</title>
-    <link rel="stylesheet" href="/styles.css">
-</head>
 <body>
     <h1 class="main-title">Search Our Products</h1>
     <form action="/search_result" method="GET" class="form-container">
-        <input id="search_name" type="text" name="search_name" placeholder="Name">
-        <select id="search_category" name ="search_category" >
-            <% productCategories.forEach(function(cat) { %>
-                <option value="<%= cat %>"><%= cat %></option>
-            <% }); %>
-        </select>
+        <input id="search_name" type="text" required name="search_name" placeholder="Name">
+        <input id="search_category" type="text" name="search_category" placeholder="Category">
         <input type="submit" value="OK" class="submit-btn">
     </form>
     <% if (searchData) { %>
@@ -21,4 +11,3 @@
         </div>
     <% } %>
 </body>
-</html>

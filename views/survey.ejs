@@ -1,23 +1,17 @@
-<!doctype html>
-<html>
-<head>
-    <title><%= shopName %> - Survey</title>
-    <link rel="stylesheet" href="/styles.css">
-</head>
 <body>
     <h1 class="main-title">Customer Satisfaction Survey</h1>
     <form method="POST" action="/submit_survey" class="form-container">
         <label for="first_name">First Name:</label>
-        <input id="first_name" type="text" name="first_name">
+        <input id="first_name" type="text" required name="first_name">
         <label for="last_name">Last Name:</label>
-        <input id="last_name" type="text" name="last_name">
+        <input id="last_name" type="text" required name="last_name">
         <label for="email">Email:</label>
-        <input id="email" type="email" name="email">
+        <input id="email" type="email" required name="email">
         <label for="age" >How old are you?</label>
-        <input id="age" type="text" name="age">
+        <input id="age" type="text" required name="age">
         <label for="chosen_product_category">Which of the following drink categories do you consume?</label>
         <!-- radio buttons -->
-        <select id="product_categories" name="chosen_product_category">
+        <select id="product_categories" required name="chosen_product_category">
             <% productCategories.forEach(function(cat) { %>
                 <option value="<%= cat %>"><%= cat %></option>
             <% }); %>
@@ -31,4 +25,3 @@
         <div style="text-align: center;"><input type="submit" value="Submit" class="submit-btn"/></div>
     </form>
 </body>
-</html>
